@@ -1,0 +1,33 @@
+Human-Readable Algorithm:
+
+1. Initialization:
+    - Load existing tickets and draw history from localStorage.
+    - Set up event listeners for buttons.
+
+2. User Mode:
+    - When the user selects User Mode:
+        1. Hide the landing page and show the user mode interface.
+        2. Generate a grid of 52 number buttons.
+        3. Allow the user to select exactly 6 numbers.
+        4. Allow the user to specify the number of boards (1-10) and if they want Lotto Plus 1 and/or Lotto Plus 2.
+        5. Validate the number of selected numbers and boards.
+        6. Generate tickets based on user selections and calculate the total cost.
+        7. Display a summary of the selected numbers, boards, and cost.
+        8. Confirm the purchase and save the ticket information to localStorage.
+
+3. Admin Mode:
+    - When the admin selects Admin Mode:
+        1. Hide the landing page and show the admin mode interface.
+        2. Allow the admin to simulate a lotto draw by generating 6 random winning numbers.
+        3. Display the winning numbers.
+        4. Check all saved tickets against the winning numbers and identify winners.
+        5. Display winning tickets and notify the admin if there are winners.
+        6. Save the draw results and update the draw history in localStorage.
+
+4. General Functions:
+    - Generate a random set of 6 unique numbers between 1 and 52.
+    - Calculate the total cost based on the number of boards and Lotto Plus options.
+    - Check if a ticket is a winner by comparing its numbers with the winning numbers.
+    - Persist and retrieve data from localStorage.
+
+
