@@ -7,8 +7,8 @@ Human-Readable Algorithm:
 2. User Mode:
     - When the user selects User Mode:
         1. Hide the landing page and show the user mode interface.
-        2. Generate a grid of 52 number buttons.
-        3. Allow the user to select exactly 6 numbers.
+        2. Generate a grid of 52 number buttons and display the number buttons.
+        3. Allow the user to select exactly 6 numbers and provide an alert message when a 7th number is selected.
         4. Allow the user to specify the number of boards (1-10) and if they want Lotto Plus 1 and/or Lotto Plus 2.
         5. Validate the number of selected numbers and boards.
         6. Generate tickets based on user selections and calculate the total cost.
