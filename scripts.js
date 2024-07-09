@@ -50,6 +50,28 @@ document.addEventListener('DOMContentLoaded', () => {
             numberButton.classList.add('number-button');
             setBallColor(numberButton, i);
             numberGrid.appendChild(numberButton);
+
+            // Add event for board selection
+
+            numberButton.addEventListener('click', () => {
+                if (selectedNumbers.includes(i)) {
+                    selectedNumbers = selectedNumbers.filter(num => num !== i);
+                    numberButton.classList.remove('selected');
+                } else {
+                    if (selectedNumbers.length < 6) {
+                        selectedNumbers.push(i);
+                        numberButton.classList.add('selected');
+                    } else {
+                        alert('You can only select 6 numbers.');
+                    }
+                }
+            });
+
+            // Add new instance of grid to numberSelectionPage for each board 
+
+            numberSelectionPage.appendChild(numberGrid);
+            
+            // Add event listener for number selection
             
             numberButton.addEventListener('click', () => {
                 if (selectedNumbers.includes(i)) {
