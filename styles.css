@@ -1,0 +1,99 @@
+/* This CSS snippet defines styling rules for various elements in a webpage:
+
+Sets basic styles for the body, such as font, background color, and centering content.
+Styles the #app element with width, background color, border radius, box shadow, and padding.
+Centers h1 and h2 elements.
+Styles buttons with specific properties like padding, font size, background color, and hover effect.
+Defines a grid layout for #number-grid with columns, gap, and margin.
+Styles .number-button elements with padding, font size, border, and cursor.
+Modifies the background color and text color of selected .number-button.
+Styles input[type="number"] elements.
+Centers labels, #summary, and #notifications elements. */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 2rem;
+    padding: 2rem;
+    background-color: rgb(248, 199, 36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#app {
+    width: 80%;
+    max-width: 1200px;
+    background-color: rgb(248, 199, 36);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: rgb(248, 199, 36);
+}
+
+button:hover {
+    background-color: rgb(179, 36, 0);
+}
+
+#number-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.number-button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.number-button.selected {
+    background-color: #007bff;
+    color: white;
+}
+
+input[type="number"] {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+label {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+#summary {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#notifications {
+    text-align: center;
+    margin: 20px 0;
+}
+
+
