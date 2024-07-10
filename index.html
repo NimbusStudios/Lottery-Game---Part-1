@@ -16,10 +16,10 @@ The file also includes links to an external CSS file and a JavaScript file calle
 <body>
 
     <div id="app">
-       <img src="lotto.png" alt="Lotto" style="display: block; margin: 0 auto;">
+       <img src="lotto.png" alt="Lotto" style="display: block; margin: 0 auto; max-width: 12rem;">
         <!-- Landing Page -->
-        <div id="landing-page">
-            <h1>Welcome to the Lotto Simulator</h1>
+        <div id="landing-page"> 
+            <h2>Welcome to the Lotto Simulator</h2>
             <button id="user-mode-btn">User Mode</button>
             <button id="admin-mode-btn">Admin Mode</button>
         </div>
@@ -27,7 +27,8 @@ The file also includes links to an external CSS file and a JavaScript file calle
         <!-- User Mode -->
         <div id="user-mode" style="display:none;">
             <!-- Number Selection Page -->
-            <div id="number-selection-page">
+           
+            <div id="number-selection-page" style="display: block;">
                 <h2>Select Your Numbers</h2>
                 <div id="number-grid"></div>
                 <input type="number" id="boards-count" placeholder="Enter number of boards" min="1" max="10">
@@ -55,7 +56,7 @@ The file also includes links to an external CSS file and a JavaScript file calle
         </div>
         
         <!-- Admin Mode -->
-        <div id="admin-mode" style="display:none;">
+        <div id="admin-mode" style="display:none;" justify-content: center;>
             <!-- Draw Simulation Page -->
             <div id="draw-simulation-page">
                 <h2>Simulate Lotto Draw</h2>
@@ -64,7 +65,7 @@ The file also includes links to an external CSS file and a JavaScript file calle
             </div>
             
             <!-- History Page -->
-            <div id="history-page" style="display:none;">
+            <div id="history-page" style="display:none;" justify-content: center>
                 <h2>History</h2>
                 <div id="history"></div>
             </div>
