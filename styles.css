@@ -11,7 +11,7 @@ Styles input[type="number"] elements.
 Centers labels, #summary, and #notifications elements. */
 
 body {
-    font-family: futura, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 2rem;
     padding: 2rem;
     background-color: rgb(0, 0, 0);
@@ -50,11 +50,11 @@ button {
     clear: unset;
     border-radius: 50px;
     background-color: #000000;
-    color: rgb(248, 199, 36);
+    color: rgb(220, 173, 20);
 }
 
 button:hover {
-    background-color: rgb(255, 255, 255);
+    box-shadow: inset 0 100px 0 0 #ffffff;
 }
 
 #number-grid {
@@ -72,15 +72,32 @@ button:hover {
     border: 1px solid #ddd;
     border-radius: 5px;
     cursor: pointer;
+    display: inline-block;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #ffffff;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+
+.number-button:hover {
+  box-shadow: inset 0 100px 0 0 #ffffff;
+}
+
+
+#outer {
+  width: 364px;
+  margin: 50px auto 0 auto;
+  text-align: center;
 }
 
 .number-button.selected {
+    box-shadow: inset 0 100px 0 0 #ffffff;
     
-    background-color: #ffffff;
-    color: #f8f5f5;
-    fill: #000000;
-    stroke: #000000;
-    opacity: 15%;
+    
     
 
 }

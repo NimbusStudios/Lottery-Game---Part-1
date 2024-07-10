@@ -103,31 +103,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Generate tickets based on user selection
-    function generateTickets(boardsCount, numbers, lottoPlus1, lottoPlus2) {
+    function generateTickets(boardsCount, selectedNumbers, lottoPlus1, lottoPlus2) {
         const ticketId = `T${Date.now()}`;
         const purchaseDate = new Date().toLocaleDateString();
         const boards = [];
-
+    
         for (let i = 0; i < boardsCount; i++) {
+            const numbers = i === 0 ? selectedNumbers : generateUniqueNumbers(selectedNumbers);
             boards.push({
                 numbers,
                 lottoPlus1,
                 lottoPlus2
             });
         }
-
+    
         const totalCost = calculateTotalCost(boardsCount, lottoPlus1, lottoPlus2);
-
+    
         tickets.push({
             ticketId,
             purchaseDate,
             boards,
             totalCost
         });
-
+    
         localStorage.setItem('tickets', JSON.stringify(tickets));
     }
-
+    
+    function generateUniqueNumbers(selectedNumbers) {
+        const numbers = [];
+        while (numbers.length < 6) {
+            const number = Math.floor(Math.random() * 52) + 1;
+            if (!numbers.includes(number) && !selectedNumbers.includes(number)) {
+                numbers.push(number);
+            }
+        }
+        return numbers;
+    }
     // Calculate total cost based on boards and options
     function calculateTotalCost(boardsCount, lottoPlus1, lottoPlus2) {
         let cost = boardsCount * 5;
