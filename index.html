@@ -1,3 +1,10 @@
+<!-- This is an HTML file that defines the structure and content of a web page for a Lotto Simulator application. It includes a landing page with buttons for User Mode and Admin Mode.
+
+The User Mode section includes a number selection page where the user can select their numbers and specify the number of boards they want to purchase. It also includes checkboxes for Lotto Plus 1 and Lotto Plus 2 options. After the user proceeds, they are taken to a confirmation page where they can confirm their selection and generate tickets. The notification page displays any notifications or alerts related to the ticket generation process.
+
+The Admin Mode section includes a draw simulation page where the admin can simulate a Lotto draw and display the results. It also includes a history page where the admin can view the draw history.
+
+The file also includes links to an external CSS file and a JavaScript file called "scripts.js". -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +15,10 @@
 </head>
 <body>
     <div id="app">
+       <img src="lotto.png" alt="Lotto" style="display: block; margin: 0 auto; max-width: 12rem;">
         <!-- Landing Page -->
-        <div id="landing-page">
-            <h1>Welcome to the Lotto Simulator</h1>
+        <div id="landing-page"> 
+            <h2>Welcome to the Lotto Simulator</h2>
             <button id="user-mode-btn">User Mode</button>
             <button id="admin-mode-btn">Admin Mode</button>
         </div>
@@ -18,7 +26,8 @@
         <!-- User Mode -->
         <div id="user-mode" style="display:none;">
             <!-- Number Selection Page -->
-            <div id="number-selection-page">
+           
+            <div id="number-selection-page" style="display: block;">
                 <h2>Select Your Numbers</h2>
                 <div id="number-grid"></div>
                 <input type="number" id="boards-count" placeholder="Enter number of boards" min="1" max="10">
@@ -31,7 +40,36 @@
                 <button id="proceed-btn">Proceed</button>
             </div>
             
-         
+            <!-- Confirmation Page -->
+            <div id="confirmation-page" style="display:none;">
+                <h2>Confirmation</h2>
+                <div id="summary"></div>
+                <button id="confirm-btn">Confirm</button>
+            </div>
+            
+            <!-- Notification Page -->
+            <div id="notification-page" style="display:none;">
+                <h2>Notifications</h2>
+                <div id="notifications"></div>
+            </div>
+        </div>
+        
+        <!-- Admin Mode -->
+        <div id="admin-mode" style="display:none;" justify-content: center;>
+
+            <!-- Draw Simulation Page -->
+            <div id="draw-simulation-page">
+                <h2>Simulate Lotto Draw</h2>
+                <button id="simulate-draw-btn">Simulate Draw</button>
+                <div id="draw-results"></div>
+            </div>
+            
+            <!-- History Page -->
+            <div id="history-page" style="display:none;" justify-content: center>
+                <h2>History</h2>
+                <div id="history"></div>
+            </div>
+        </div>
     </div>
     <script src="scripts.js"></script>
 </body>
